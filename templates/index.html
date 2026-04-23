@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container hero-content">
+        <h1>CHARITABLE DENTAL CLINIC</h1>
+        <p>Providing high-quality, compassionate, and affordable dental care to our community. We believe everyone deserves a healthy smile.</p>
+        <div class="hero-buttons">
+            <a href="#book" class="btn btn-primary">Book an Appointment</a>
+            <a href="#services" class="btn btn-outline">Our Services</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container about-container">
+        <div class="about-text">
+            <h2>About Our Clinic</h2>
+            <div class="divider"></div>
+            <p>Charitable dental clinic is a non-profit dental clinic dedicated to serving individuals and families who lack access to adequate dental care. Founded in 2018 by a group of passionate volunteer dentists, our mission is to eliminate dental pain and restore dignity through comprehensive oral healthcare.</p>
+            <p>We operate solely on donations and the dedication of our volunteer staff. Every patient is treated with the utmost respect and care, regardless of their ability to pay.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>15k+</h3>
+                    <p>Patients Treated</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3+</h3>
+                    <p>Volunteer Doctors</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12</h3>
+                    <p>Years of Service</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <div class="image-placeholder gradient-bg">
+                <i class="fa-solid fa-hand-holding-heart fa-5x text-white"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Dental Services</h2>
+            <div class="divider"></div>
+            <p>We provide a wide range of essential dental treatments to ensure your oral health is at its best.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-tooth"></i></div>
+                <h3>Regular Check-up</h3>
+                <p>Comprehensive oral examinations to detect and prevent dental issues early.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-teeth-open"></i></div>
+                <h3>Teeth Cleaning</h3>
+                <p>Professional cleaning to remove plaque and tartar, ensuring healthy gums and teeth.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-syringe"></i></div>
+                <h3>Tooth Extraction</h3>
+                <p>Safe and painless removal of severely decayed or damaged teeth.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-x-ray"></i></div>
+                <h3>Dental X-Rays</h3>
+                <p>Advanced diagnostic imaging to see beneath the surface of your teeth and gums.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-teeth"></i></div>
+                <h3>Fillings & Restorations</h3>
+                <p>Restoring the function and integrity of missing tooth structure.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-face-smile"></i></div>
+                <h3>Orthodontic Consultation</h3>
+                <p>Basic consultations for braces and alignment corrections for children and adults.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Doctors Section -->
+<section id="doctors" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Meet Our Volunteer Doctors</h2>
+            <div class="divider"></div>
+            <p>Our dedicated team of professionals who donate their time and expertise.</p>
+        </div>
+        <div class="doctors-grid">
+            <div class="doctor-card">
+                
+                <div class="doctor-info">
+                    <h3>Dr. Neha Gupta</h3>
+                    <span class="specialty">General Dentist</span>
+                    <p>10 years experience</p>
+                </div>
+            </div>
+            <div class="doctor-card">
+                
+                <div class="doctor-info">
+                    <h3>Dr. Neha Gupta</h3>
+                    <span class="specialty">Orthodontist</span>
+                    <p>10 years experience</p>
+                </div>
+            </div>
+            <div class="doctor-card">
+            
+                <div class="doctor-info">
+                    <h3>Dr. Gourav </h3>
+                    <span class="specialty">Teeth Extraction</span>
+                    <p>15 years experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Booking Section -->
+<section id="book" class="section bg-light">
+    <div class="container booking-container">
+        <div class="booking-info">
+            <h2>Book an Appointment</h2>
+            <div class="divider"></div>
+            <p>Fill out the form to request an appointment. Our team will review your request and get back to you shortly.</p>
+            <div class="booking-features">
+                <div class="feature"><i class="fa-solid fa-check-circle"></i> Easy online booking</div>
+                <div class="feature"><i class="fa-solid fa-check-circle"></i> No hidden fees</div>
+                <div class="feature"><i class="fa-solid fa-check-circle"></i> Compassionate care</div>
+            </div>
+        </div>
+        <div class="booking-form-wrapper card-shadow">
+            <form id="appointment-form" class="form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="1" max="120" placeholder="30">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select Time</option>
+                            <option value="Morning (8AM - 12PM)">Morning (8AM - 12PM)</option>
+                            <option value="Afternoon (12PM - 4PM)">Afternoon (12PM - 4PM)</option>
+                            <option value="Evening (4PM - 6PM)">Evening (4PM - 6PM)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="problem">Problem Description</label>
+                    <textarea id="problem" name="problem" rows="4" placeholder="Briefly describe your dental issue..."></textarea>
+                </div>
+                <div id="form-message" class="alert" style="display: none;"></div>
+                <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Feedback Section -->
+<section id="feedback" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Patient Stories</h2>
+            <div class="divider"></div>
+            <p>Hear what our patients have to say about their experience.</p>
+        </div>
+        
+        <div class="feedback-container">
+            <div class="feedback-list">
+                {% if feedbacks %}
+                    {% for fb in feedbacks %}
+                    <div class="feedback-card">
+                        <div class="stars">
+                            {% for i in range(fb.rating) %}
+                                <i class="fa-solid fa-star"></i>
+                            {% endfor %}
+                            {% for i in range(5 - fb.rating) %}
+                                <i class="fa-regular fa-star"></i>
+                            {% endfor %}
+                        </div>
+                        <p class="comment">"{{ fb.comments }}"</p>
+                        <span class="patient-name">- {{ fb.patient_name }}</span>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="text-center text-muted">No feedbacks yet. Be the first to leave one!</p>
+                {% endif %}
+            </div>
+            
+            <div class="leave-feedback card-shadow">
+                <h3>Leave a Feedback</h3>
+                <form id="feedback-form">
+                    <div class="form-group">
+                        <label for="patient_name">Your Name</label>
+                        <input type="text" id="patient_name" name="patient_name" placeholder="Leave blank for Anonymous">
+                    </div>
+                    <div class="form-group">
+                        <label>Rating *</label>
+                        <div class="rating-input">
+                            <input type="radio" name="rating" id="star5" value="5" required><label for="star5"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star4" value="4"><label for="star4"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star3" value="3"><label for="star3"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star2" value="2"><label for="star2"><i class="fa-solid fa-star"></i></label>
+                            <input type="radio" name="rating" id="star1" value="1"><label for="star1"><i class="fa-solid fa-star"></i></label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Your Experience</label>
+                        <textarea id="comments" name="comments" rows="3" required placeholder="Tell us how we did..."></textarea>
+                    </div>
+                    <div id="feedback-message" class="alert" style="display: none;"></div>
+                    <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

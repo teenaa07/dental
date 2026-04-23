@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Charitable Dental Clinic</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="description" content="Providing high-quality charitable dental care to those in need.">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <i class="fa-solid fa-tooth"></i> Dental Clinic
+            </a>
+            <ul class="nav-links">
+                <li><a href="/#home">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#doctors">Doctors</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                {% if session.get('admin_logged_in') %}
+                    <li><a href="/dashboard" class="nav-btn admin-btn">Dashboard</a></li>
+                {% else %}
+                    <li><a href="/admin" class="nav-btn admin-btn">Admin</a></li>
+                {% endif %}
+                <li><a href="/#book" class="nav-btn">Book Appointment</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Charitable Dental Clinic</h3>
+                <p>Providing charitable dental care to bring healthy smiles to our community since 2010.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#services">Our Services</a></li>
+                    <li><a href="/#doctors">Our Doctors</a></li>
+                    <li><a href="/#book">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Care Avenue, Cityville, ST 12345</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@smilecare.org</p>
+            </div>
+            <div class="footer-col">
+                <h3>Working Hours</h3>
+                <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 10:00 AM - 2:00 PM</p>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ now_year|default('2026') }}  Charitable Dental Clinic. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
